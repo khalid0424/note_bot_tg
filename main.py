@@ -3,18 +3,18 @@ from telebot.types import ReplyKeyboardMarkup, KeyboardButton, InlineKeyboardMar
 import psycopg2
 from datetime import datetime
 
-TOKEN = '8111006035:AAG47ubX9PWryQ29um4MtkB3xO-b5jp02jI'  
+TOKEN = ''  
 bot = telebot.TeleBot(TOKEN)
 
 DB_CONNECTION = {
     'dbname': 'dbnote',
     'user': 'postgres',
-    'password': 'Khalid2004',
+    'password': '********',
     'host': 'localhost',
 }
 
 def connect_db():
-    return psycopg2.connect(**DB_CONNECTION)
+    return psycopg2.connect(DB_CONNECTION)
 
 def create_tables():
     conn = connect_db()
